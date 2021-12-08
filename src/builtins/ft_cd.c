@@ -27,11 +27,12 @@ static int	update_pwd(t_data *data)
 	else
 	{
 		free_matrix(data->all[3]);
-		new[0] = ft_strdup("export");
+		new[0] = "export";
 		new[1] = ft_strjoin("PWD=", cwd);
 		new[2] = NULL;
 		data->all[3] = new;
 		ft_export(data);
+		free(new[1]);
 		data->all[3] = NULL;
 	}
 	return (0);

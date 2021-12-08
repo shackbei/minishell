@@ -21,12 +21,12 @@ int	ft_echo(t_data *data)
 	argv = data->all[3];
 	is_n = 0;
 	i = 1;
-	if (argv[1] && !ft_strncmp(argv[1], "-n", 3))
+	if (argv[1] && !ft_strncmp(argv[1], "-n", 2))
 	{
 		is_n = 1;
 		i++;
 	}
-	while (argv[i] && ft_strncmp(argv[i], "-n", 3) == 0)
+	while (argv[i] && ft_strncmp(argv[i], "-n", 2) == 0)
 		i++;
 	while (argv[i])
 	{
